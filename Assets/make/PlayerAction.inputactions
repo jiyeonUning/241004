@@ -1,0 +1,90 @@
+{
+    "name": "PlayerAction",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "84d01494-01fa-46d7-bc5d-c8d6fcd70692",
+            "actions": [
+                {
+                    "name": "mouseClick",
+                    "type": "Button",
+                    "id": "1d6762fa-f8d9-4ebe-aff0-d6645ffa9425",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c631dcae-3309-425a-b794-6eeee2421cd2",
+                    "path": "<Mouse>/LeftButton",
+                    "interactions": "Hold,Tap",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "mouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "id": "7feb183d-6b2d-43e9-acd6-05e19f10ccb1",
+            "actions": [
+                {
+                    "name": "touchscreen",
+                    "type": "Button",
+                    "id": "c66bebf3-6840-4c7d-a05b-2e6f2477bb47",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a108a6da-998d-46f9-8574-43e3f49c59e2",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Hold,Tap",
+                    "processors": "",
+                    "groups": "Moblie",
+                    "action": "touchscreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Moblie",
+            "bindingGroup": "Moblie",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
