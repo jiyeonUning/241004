@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gauge: {fileID: 1836314862}
   ballPrefab: {fileID: 7317281541752216406, guid: 19e0523b60f06854eb29fca7e435d7b8, type: 3}
+  input: {fileID: 311267625}
   ShootSpeed: 7
   MaxShootSpeed: 12
 --- !u!4 &311267624
@@ -1004,7 +1005,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 15
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

@@ -42,7 +42,7 @@ public partial class @PlayerAction: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""c631dcae-3309-425a-b794-6eeee2421cd2"",
                     ""path"": ""<Mouse>/LeftButton"",
-                    ""interactions"": ""Hold,Tap"",
+                    ""interactions"": ""Hold,Tap(duration=7)"",
                     ""processors"": """",
                     ""groups"": ""PC"",
                     ""action"": ""mouseClick"",
@@ -57,7 +57,7 @@ public partial class @PlayerAction: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""touchscreen"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""c66bebf3-6840-4c7d-a05b-2e6f2477bb47"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -70,7 +70,7 @@ public partial class @PlayerAction: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""a108a6da-998d-46f9-8574-43e3f49c59e2"",
                     ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": ""Hold,Tap"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Moblie"",
                     ""action"": ""touchscreen"",

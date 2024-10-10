@@ -12,45 +12,22 @@ public class Shooter : MonoBehaviour
 
     [SerializeField] Slider gauge;
     [SerializeField] GameObject ballPrefab;
-    [SerializeField] PlayerAction playerAction;
+    [SerializeField] PlayerInput input;
 
     [SerializeField] float ShootSpeed;
-    [SerializeField] float MaxShootSpeed = 7f;
+    [SerializeField] float MaxShootSpeed = 15f;
 
-    private Touch touch;
     private bool PowerBarMoving = false;
 
 
-
-    private void Awake()
+    private void Update()
     {
-        playerAction = new PlayerAction();
-    }
-
-    private void OnEnable()
-    {
-        playerAction.Mouse.mouseClick.Enable();
-        playerAction.Touch.touchscreen.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerAction.Mouse.mouseClick.Disable();
-        playerAction.Touch.touchscreen.Disable();
-    }
-
-    private void Start()
-    {
-        playerAction.Mouse.mouseClick.started += PowerBar;
-        playerAction.Mouse.mouseClick.canceled += Shot;
-
-        playerAction.Touch.touchscreen.started += PowerBar;
-        playerAction.Touch.touchscreen.canceled += Shot;
+        if (input.actions["touchscreen"].WasPressedThisFrame()) { PowerBar(); }
+        if (input.actions["touchscreen"].WasReleasedThisFrame()) { Shot(); }
     }
 
 
-
-    void PowerBar(InputAction.CallbackContext context)
+    void PowerBar()
     {
         if (PowerBarMoving == false)
         {
@@ -59,7 +36,7 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    void Shot(InputAction.CallbackContext context)
+    void Shot()
     {
         ShootSpeed = gauge.value;
 
@@ -82,7 +59,6 @@ public class Shooter : MonoBehaviour
 
         while (PowerBarMoving == false)
         {
-            ShootSpeed = 0f;
             gauge.value = 0f;
             yield return null;
         }
